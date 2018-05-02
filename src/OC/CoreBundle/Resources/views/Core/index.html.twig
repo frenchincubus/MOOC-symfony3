@@ -1,0 +1,29 @@
+{# src/OC/CoreBundle/Resources/views/Core/index.html.twig #}
+
+{% extends "OCCoreBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+  {% for message in app.session.flashbag.get('info') %}
+	<p class="btn btn-default" id="blue"> Message : {{ message }} </p>
+ {% endfor %}
+
+<style>
+	#blue{
+		float: left;
+		margin-left: 200px;
+		background-color: red;
+		color: white;
+		text-align: center;
+	}
+</style>
+
+
+{% endblock %}
+
+
+

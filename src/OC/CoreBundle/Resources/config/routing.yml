@@ -1,0 +1,11 @@
+oc_core_homepage:
+    path:     /{page}
+    defaults:
+        _controller: OCCoreBundle:Core:index
+        page:        1
+    requirements:
+        page: \d*
+
+oc_core_contact:
+    path:     /contact
+    defaults: { _controller: OCCoreBundle:Core:contact }
